@@ -22,11 +22,11 @@ public class Ex4 {
     }
 
     @FunctionalInterface
-    public interface Function<T, R> {
+    private interface Function<T, R> {
         R apply(T t);
     }
 
-    public static <T, R> List<R> map(List<T> list, Function<T, R> f) {
+    private static <T, R> List<R> map(List<T> list, Function<T, R> f) {
         List<R> result = new ArrayList<>();
         for (T e: list) {
             result.add(f.apply(e));

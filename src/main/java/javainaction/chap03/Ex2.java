@@ -21,11 +21,11 @@ public class Ex2 {
     }
 
     @FunctionalInterface
-    public interface Predicate<T> {
+    private interface Predicate<T> {
         boolean test(T t);
     }
 
-    public static <T> List<T> filter(List<T> list, Predicate<T> p) {
+    private static <T> List<T> filter(List<T> list, Predicate<T> p) {
         List<T> result = new ArrayList<>();
 
         for (T t: list) {

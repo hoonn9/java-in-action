@@ -18,11 +18,11 @@ public class Ex1 {
     }
 
 
-    public interface BufferedReaderProcessor {
+    private interface BufferedReaderProcessor {
         String process(BufferedReader b) throws IOException;
     }
 
-    public static String processFile(BufferedReaderProcessor p) throws IOException {
+    private static String processFile(BufferedReaderProcessor p) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
             return p.process(br);
         }
